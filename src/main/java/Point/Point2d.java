@@ -7,7 +7,7 @@ public class Point2d extends AbstractPoint {
     /** TODO
      * 2D Point Constructor from coordinates
      * @param x X coordinate
-     * @param y Y coordinate
+     * @param y Y coordinate test
      */
     public Point2d(Double x, Double y) {
         super(new double[] {0.0, 0.0});

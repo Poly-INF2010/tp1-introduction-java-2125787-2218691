@@ -18,7 +18,7 @@ public final class LetterFactory {
      * @return BaseShape containing the letter A
      */
     public static BaseShape create_A()  {
-        BaseShape shapeA = new BaseShape();
+
         Rectangle brancheDroite = new Rectangle(halfStripeThickness, Math.sqrt((maxHeight * maxHeight) + (halfMaxWidth * halfMaxWidth)));
         Rectangle brancheGauche = brancheDroite.clone();
         Rectangle brancheMilieu = new Rectangle(halfMaxWidth, halfStripeThickness);
@@ -31,12 +31,11 @@ public final class LetterFactory {
         brancheDroite.translate(brancheDroite.getCoords(), new Point2d(-(halfMaxWidth-halfStripeThickness), 0.0));
         brancheHaut.translate(brancheHaut.getCoords(), new Point2d(0.0, -(halfMaxHeight - (halfStripeThickness/2))));
 
-        //Formation de la lettre A
-        shapeA.add(brancheDroite);
-        shapeA.add(brancheGauche);
-        shapeA.add(brancheMilieu);
-        shapeA.add(brancheHaut);
-        return shapeA;
+        return new BaseShape()
+                .add(brancheDroite)
+                .add(brancheGauche)
+                .add(brancheMilieu)
+                .add(brancheHaut);
     }
     /** TODO
      * Create the letter B graphically
@@ -55,11 +54,10 @@ public final class LetterFactory {
         cercleBas.translate(cercleBas.getCoords(), new Point2d(0.0, halfMaxHeight / 2));
         brancheGauche.translate(brancheGauche.getCoords(), new Point2d(-(halfMaxWidth), 0.0));
 
-        BaseShape shapeB = new BaseShape();
-        shapeB.add(cercleHaut);
-        shapeB.add(cercleBas);
-        shapeB.add(brancheGauche);
-        return shapeB;
+        return new BaseShape()
+                .add(cercleHaut)
+                .add(cercleBas)
+                .add(brancheGauche);
     }
 
     /** TODO
@@ -76,9 +74,8 @@ public final class LetterFactory {
         ellipseLarge.remove(ellipseEface);
         ellipseLarge.remove(rectangleEface);
 
-        BaseShape shapeC = new BaseShape();
-        shapeC.add(ellipseLarge);
-        return shapeC;
+        return new BaseShape()
+                .add(ellipseLarge);
     }
 
     /** TODO
@@ -95,12 +92,11 @@ public final class LetterFactory {
         brancheHaut.translate(brancheHaut.getCoords(), new Point2d(0.0, -(halfMaxHeight - halfStripeThickness)));
         brancheBas.translate(brancheBas.getCoords(), new Point2d(0.0, halfMaxHeight - halfStripeThickness));
 
-        BaseShape shapeE = new BaseShape();
-        shapeE.add(brancheHaut);
-        shapeE.add(brancheMilieu);
-        shapeE.add(brancheGauche);
-        shapeE.add(brancheBas);
-        return shapeE;
+        return new BaseShape()
+                .add(brancheHaut)
+                .add(brancheMilieu)
+                .add(brancheGauche)
+                .add(brancheBas);
     }
 
     /** TODO
@@ -115,11 +111,10 @@ public final class LetterFactory {
         brancheDroite.translate(brancheDroite.getCoords(), new Point2d(halfMaxWidth, 0.0));
         brancheGauche.translate(brancheGauche.getCoords(), new Point2d(-(halfMaxWidth), 0.0));
 
-        BaseShape shapeH = new BaseShape();
-        shapeH.add(brancheMilieu);
-        shapeH.add(brancheDroite);
-        shapeH.add(brancheGauche);
-        return shapeH;
+        return new BaseShape()
+                .add(brancheMilieu)
+                .add(brancheDroite)
+                .add(brancheGauche);
     }
 
     /** TODO
@@ -135,11 +130,10 @@ public final class LetterFactory {
         brancheGauche.translate(brancheGauche.getCoords(), new Point2d(-(halfMaxWidth), 0.0));
         brancheMilieu.rotate(brancheMilieu.getCoords(), -(Math.PI/8));
 
-        BaseShape shapeN = new BaseShape();
-        shapeN.add(brancheMilieu);
-        shapeN.add(brancheDroite);
-        shapeN.add(brancheGauche);
-        return shapeN;
+        return new BaseShape()
+                .add(brancheMilieu)
+                .add(brancheDroite)
+                .add(brancheGauche);
     }
 
     /** TODO
@@ -152,9 +146,8 @@ public final class LetterFactory {
 
         ellipseLarge.remove(ellipseEface);
 
-        BaseShape shapeO = new BaseShape();
-        shapeO.add(ellipseLarge);
-        return shapeO;
+        return new BaseShape()
+                .add(ellipseLarge);
     }
 
 }

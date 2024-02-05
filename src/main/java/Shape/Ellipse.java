@@ -41,6 +41,6 @@ public class Ellipse extends BaseShape {
      */
     @Override
     public Ellipse clone() {
-        return this;
+        return new Ellipse(this.getCoords());
     }
 }

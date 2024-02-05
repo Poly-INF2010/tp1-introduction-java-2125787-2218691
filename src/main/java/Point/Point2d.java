@@ -112,7 +112,7 @@ public class Point2d extends AbstractPoint {
      */
     @Override
     public Point2d clone() {
-        Point2d point2d = null;
+        Point2d point2d;
         try {
             point2d = (Point2d) super.clone();
         } catch (CloneNotSupportedException e) {

@@ -30,9 +30,7 @@ public final class PointOperator {
                 vectorTemp[i] += vector[j] * rotationMatrix[i][j];
             }
         }
-        for(int i = 0; i < vector.length; i++){
-            vector[i] = vectorTemp[i];
-        }
+        System.arraycopy(vectorTemp, 0, vector, 0, vector.length);
     }
 
     /** TODO

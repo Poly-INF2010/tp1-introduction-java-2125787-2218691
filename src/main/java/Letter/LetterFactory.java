@@ -1,7 +1,6 @@
 package Letter;
 
-import Interface.Rotate;
-import Interface.Translate;
+
 import Point.Point2d;
 import Shape.*;
 
